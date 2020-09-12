@@ -4,11 +4,14 @@ const axios = Axios.create({
   baseURL: 'http://localhost:5000',
 })
 
-const examples = {}
+const books = {}
 
-examples.get = () => axios.get('/examples')
-examples.getSingle = (id) => axios.get(`/examples/${id}`)
+books.get = () => axios.get('/books')
+books.getSingle = (id) => axios.get(`/books/${id}`)
+books.post = (data) => axios.post('/books', data)
+books.delete = (id) => axios.delete(`/books/${id}`)
+books.put = (id, data) => axios.put(`/books/${id}`, data)
 
 export {
-  examples,
+  books,
 }

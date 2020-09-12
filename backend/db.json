@@ -1,5 +1,24 @@
 {
-  "users": [],
+  "books": [
+    {
+      "title": "qwqw",
+      "author": "rere",
+      "year": "rere",
+      "id": 1
+    },
+    {
+      "title": "yes",
+      "author": "ererer",
+      "year": "rere",
+      "id": 2
+    },
+    {
+      "title": "qwqw",
+      "author": "rere",
+      "year": "rere",
+      "id": 3
+    }
+  ],
   "examples": [
     {
       "id": 1,

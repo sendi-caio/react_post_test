@@ -1,12 +1,14 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import Navigation from './Navigation'
 
 import Home from '../pages/Home'
-import ExampleList from '../pages/ExampleList'
-import ExampleSingle from '../pages/ExampleSingle'
-import ExampleCreate from '../pages/ExampleCreate'
+import BookList from '../pages/BookList'
+import BookSingle from '../pages/BookSingle'
+import BookCreate from '../pages/BookCreate'
+import BookUpdate from '../pages/BookUpdate'
 
 function Base() {
   return (
@@ -14,12 +16,13 @@ function Base() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <Home />
+            <BookList />
           </Route>
           {/* EXAMPLE START */}
-          <Route path="/example/create" component={ExampleCreate} />
-          <Route path="/example/:id" component={ExampleSingle} />
-          <Route path="/example" component={ExampleList} />
+          <Route path="/books/create" component={BookCreate} />
+          <Route exact path="/books/:id" component={BookSingle} />
+          <Route path="/books/:id/update" component={BookUpdate} />
+          <Route path="/books" component={BookList} />
           {/* EXAMPLE END */}
 
           {/* ROUTES START HERE */}

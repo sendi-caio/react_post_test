@@ -1,5 +1,5 @@
 import React from 'react'
-import ExampleCard from '../components/ExampleCard'
+import ExampleCard from '../components/BookCard'
 
 function Home() {
   return (
