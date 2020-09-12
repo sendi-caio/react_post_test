@@ -4,9 +4,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Navigation from './Navigation'
 
 import Home from '../pages/Home'
-import ExampleList from '../pages/ExampleList'
-import ExampleSingle from '../pages/ExampleSingle'
-import ExampleCreate from '../pages/ExampleCreate'
+import List from '../pages/List'
+import Single from '../pages/Single'
+import Create from '../pages/Create'
 
 function Base() {
   return (
@@ -17,9 +17,11 @@ function Base() {
             <Home />
           </Route>
           {/* EXAMPLE START */}
-          <Route path="/example/create" component={ExampleCreate} />
-          <Route path="/example/:id" component={ExampleSingle} />
-          <Route path="/example" component={ExampleList} />
+          <Route path="/books/create" component={Create} />
+          <Route path="/books/:id" component={Single} />
+          <Route path="/books" component={List} />
+          <Route path="/books/delete/:id" />
+
           {/* EXAMPLE END */}
 
           {/* ROUTES START HERE */}

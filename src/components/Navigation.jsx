@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom'
 
 const routesArray = [
   ['Home', '/'],
-  ['Example Create', '/example/create'],
-  ['Example', '/example'],
+  ['List', '/books'],
+  ['Add Book', '/books/create'],
 ]
 
 function Navigation() {

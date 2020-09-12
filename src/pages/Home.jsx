@@ -1,9 +1,10 @@
+/* eslint-disable import/extensions */
 import React from 'react'
-import ExampleCard from '../components/ExampleCard'
+import Card from '../components/Card'
 
 function Home() {
   return (
-    <ExampleCard content="Home" />
+    <Card content="Home" />
   )
 }
 

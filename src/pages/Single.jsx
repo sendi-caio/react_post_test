@@ -1,15 +1,17 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/extensions */
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import ExampleCard from '../components/ExampleCard'
-import { examples } from '../services/api'
+import Details from '../components/Details'
+import { books } from '../services/api'
 
-function ExampleSingle() {
+function Single() {
   const { id } = useParams()
   const [data, setData] = useState(null)
 
   const populateData = async (contentId) => {
     try {
-      const response = await examples.getSingle(contentId)
+      const response = await books.getSingle(contentId)
       if (response.status === 200) setData(response.data)
     } catch (e) {
       if (e && e.response && e.response.data) {
@@ -26,11 +28,12 @@ function ExampleSingle() {
 
   return (
     <div>
+      <h3>Details</h3>
       {
         data
         && (
-        <ExampleCard
-          content={data.content}
+        <Details
+          content={data}
         />
         )
       }
@@ -38,4 +41,4 @@ function ExampleSingle() {
   )
 }
 
-export default ExampleSingle
+export default Single

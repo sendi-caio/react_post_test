@@ -1,10 +1,20 @@
 import React from 'react'
 
-function ExampleCard({ content, onClickCard: handleClick, contentId }) {
+function CardBook({
+  content, onClickCard: handleClick, contentId, onDeleted,
+}) {
   return (
     <div className="card m-3">
       <div className="card-body">
-        <p className="card-text">{ content }</p>
+        <h4 className="card-text">{ content }</h4>
+        <button
+          type="button"
+          className="btn btn-danger"
+          onClick={() => onDeleted(contentId)}
+        >
+          Delete
+        </button>
+
         {
           handleClick
           && (
@@ -22,4 +32,4 @@ function ExampleCard({ content, onClickCard: handleClick, contentId }) {
   )
 }
 
-export default ExampleCard
+export default CardBook
