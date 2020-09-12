@@ -14,7 +14,12 @@ function CardBook({
         >
           Delete
         </button>
-
+        <a
+          className="btn btn-success"
+          href={`${contentId}/update`}
+        >
+          Edit
+        </a>
         {
           handleClick
           && (

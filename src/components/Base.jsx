@@ -7,6 +7,7 @@ import Home from '../pages/Home'
 import List from '../pages/List'
 import Single from '../pages/Single'
 import Create from '../pages/Create'
+import Update from '../pages/Update'
 
 function Base() {
   return (
@@ -17,10 +18,10 @@ function Base() {
             <Home />
           </Route>
           {/* EXAMPLE START */}
-          <Route path="/books/create" component={Create} />
-          <Route path="/books/:id" component={Single} />
-          <Route path="/books" component={List} />
-          <Route path="/books/update/:id" />
+          <Route exact path="/books/create" component={Create} />
+          <Route exact path="/books/:id/update" component={Update} />
+          <Route exact path="/books/:id" component={Single} />
+          <Route exact path="/books" component={List} />
 
           {/* EXAMPLE END */}
 
