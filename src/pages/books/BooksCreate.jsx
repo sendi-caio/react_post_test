@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { books } from '../../services/api'
+import { useHistory } from 'react-router-dom'
 
 const BookCreate = () => {
+  const history = useHistory()
 
   const [title, setTitle] = useState('')
   const [author, setAuthor] = useState('')
@@ -21,7 +23,10 @@ const BookCreate = () => {
 
   const saveButtonClick = async () => {
     const data = { title, author, years }
-    const post = await books.postBooks(data)
+    const response = await books.postBooks(data)
+    if (response.status === 201) {
+      history.push(`/books/${response.data.id}`)
+    }
   }
 
 
@@ -50,7 +55,7 @@ const BookCreate = () => {
             />
           </div>
           <button onClick={() => saveButtonClick()} className="btn btn-primary" type="button">
-            Save
+            Create
           </button>
         </form>
       </div>

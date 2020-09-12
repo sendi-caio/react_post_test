@@ -9,6 +9,7 @@ import ExampleSingle from '../pages/ExampleSingle'
 import ExampleCreate from '../pages/ExampleCreate'
 import BooksCreate from '../pages/books/BooksCreate'
 import BooksList from '../pages/books/BooksList'
+import BooksSingle from '../pages/books/BooksSingle'
 
 function Base() {
   return (
@@ -26,7 +27,9 @@ function Base() {
 
           {/* ROUTES START HERE */}
           <Route path="/books/create" component={BooksCreate} />
-          <Route path="/books" component={BooksList} />
+          <Route path="/books/:id" component={BooksSingle} />
+          <Route path="/books" component={BooksList}/>
+
 
 
 

@@ -1,6 +1,11 @@
 import React from 'react';
 
-const BooksCard = ({ author, title, years }) => {
+const BooksCard = ({ author, title, years, id, handleDelete: onclickDelete, hanldeShow }) => {
+
+  const onClickDelete = (id) => {
+
+  }
+
   return (
     <div className="card m-3">
       <div className="card-body">
@@ -12,12 +17,20 @@ const BooksCard = ({ author, title, years }) => {
             <button
               type="button"
               className="btn btn-danger"
-              onClick=""
+              onClick={() => onClickDelete(id)}
             >
               Delete
             </button>
           )
         }
+
+        <button
+          type="button"
+          className="btn btn-primary"
+          onClick={() => onClickDelete(id)}
+        >
+          Show
+          </button>
       </div>
     </div>
   )

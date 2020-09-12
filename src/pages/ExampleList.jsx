@@ -27,7 +27,7 @@ function ExampleList() {
   const handleClickCard = (contentId) => {
     history.push(`/example/${contentId}`)
   }
-
+  
   return (
     <div>
       {

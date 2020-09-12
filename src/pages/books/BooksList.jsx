@@ -20,13 +20,16 @@ function BooksList() {
     }
   }
 
-
   useEffect(() => {
     populateData()
   }, [])
 
-  const handleClickCard = (contentId) => {
-    history.push(`/example/${contentId}`)
+  const handleClickShow = (id) => {
+    history.push(`/books/${id}`)
+  }
+
+  const handleDelete = (id) => {
+
   }
 
   return (
@@ -39,7 +42,8 @@ function BooksList() {
             author={item.author}
             title={item.title}
             years={item.years}
-            onClickCard={handleClickCard}
+            handleShow = {handleClickShow}
+            onClickCard={handleDelete}
             contentId={item.id}
           />
         ))
