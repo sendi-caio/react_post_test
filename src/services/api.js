@@ -5,10 +5,17 @@ const axios = Axios.create({
 })
 
 const examples = {}
+const books = {}
 
 examples.get = () => axios.get('/examples')
 examples.getSingle = (id) => axios.get(`/examples/${id}`)
 
+books.getBooks = (id) => axios.get(`/books`)
+books.postBooks = (data) => axios.post(`/books`, data )
+
+
+
 export {
   examples,
+  books,
 }
