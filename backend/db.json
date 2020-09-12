@@ -1,0 +1,17 @@
+{
+  "users": [],
+  "examples": [
+    {
+      "id": 1,
+      "content": "Asus"
+    },
+    {
+      "id": 2,
+      "content": "Lenovo"
+    },
+    {
+      "id": 3,
+      "content": "Acer"
+    }
+  ]
+}
