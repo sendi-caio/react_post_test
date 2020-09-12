@@ -27,12 +27,10 @@ function Update() {
   const getAuthor = (event) => {
     event.persist()
     setContent((content) => {
-      const newCont = content
-      newCont.author = event.target.value
-      return newCont
+      content.title = event.target.value
+      return content
     })
   }
-
   const getTitle = (event) => {
     setContent((cont) => {
       const newCont = cont
