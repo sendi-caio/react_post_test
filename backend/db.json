@@ -13,5 +13,37 @@
       "id": 3,
       "content": "Acer"
     }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "title1",
+      "author": "author1",
+      "year": "2000"
+    },
+    {
+      "id": 2,
+      "title": "title2",
+      "author": "author2",
+      "year": "2002"
+    },
+    {
+      "title": "title3",
+      "author": "author3",
+      "year": "2010",
+      "id": 3
+    },
+    {
+      "title": "title4",
+      "author": "author4",
+      "year": "1998",
+      "id": 4
+    },
+    {
+      "title": "title baru",
+      "author": "author baru",
+      "year": "1234",
+      "id": 5
+    }
   ]
 }

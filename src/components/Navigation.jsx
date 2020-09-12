@@ -10,6 +10,8 @@ const routesArray = [
   ['Home', '/'],
   ['Example Create', '/example/create'],
   ['Example', '/example'],
+  ['Book Create', '/book/create'],
+  ['Book', '/book'],
 ]
 
 function Navigation() {
