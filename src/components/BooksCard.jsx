@@ -1,9 +1,17 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom'
+import { books } from '../services/api'
 
 const BooksCard = ({ author, title, years, id, handleDelete: onclickDelete, hanldeShow }) => {
 
-  const onClickDelete = (id) => {
+  const history = useHistory()
 
+  const handleDelete = async (id) => {
+    const response = await books.postDelete(id)
+  }
+
+  const onClickShow = (id) => {
+    history.push(`/books/${id}`)
   }
 
   return (
@@ -17,7 +25,7 @@ const BooksCard = ({ author, title, years, id, handleDelete: onclickDelete, hanl
             <button
               type="button"
               className="btn btn-danger"
-              onClick={() => onClickDelete(id)}
+              onClick={handleDelete}
             >
               Delete
             </button>
@@ -27,7 +35,7 @@ const BooksCard = ({ author, title, years, id, handleDelete: onclickDelete, hanl
         <button
           type="button"
           className="btn btn-primary"
-          onClick={() => onClickDelete(id)}
+          onClick={() => onClickShow(id)}
         >
           Show
           </button>

@@ -29,7 +29,6 @@ const BookCreate = () => {
     }
   }
 
-
   return (
     <div className="card m-3">
       <div className="card-body">

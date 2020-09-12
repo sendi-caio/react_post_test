@@ -42,9 +42,8 @@ function BooksList() {
             author={item.author}
             title={item.title}
             years={item.years}
-            handleShow = {handleClickShow}
+            id={item.id}
             onClickCard={handleDelete}
-            contentId={item.id}
           />
         ))
       }

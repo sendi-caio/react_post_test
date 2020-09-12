@@ -32,8 +32,12 @@ const BooksSingle = () => {
         data
         && (
           <BooksCard
-            content={data.title}
-            
+            key={data.id}
+            author={data.author}
+            title={data.title}
+            years={data.years}
+            contentId={data.id}
+
           />
         )
       }
