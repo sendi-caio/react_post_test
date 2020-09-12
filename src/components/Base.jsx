@@ -20,7 +20,7 @@ function Base() {
           <Route path="/books/create" component={Create} />
           <Route path="/books/:id" component={Single} />
           <Route path="/books" component={List} />
-          <Route path="/books/delete/:id" />
+          <Route path="/books/update/:id" />
 
           {/* EXAMPLE END */}
 

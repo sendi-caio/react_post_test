@@ -10,7 +10,7 @@ function Create() {
   const saveButtonClick = async () => {
     const res = await books.create(content)
     if (res.status === 201) {
-      history.push(`books/details/${content.id}`)
+      history.push(`${res.data.id}`)
     }
   }
 
