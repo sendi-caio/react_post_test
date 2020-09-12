@@ -3,8 +3,7 @@ import { useHistory } from 'react-router-dom'
 import { books } from '../../services/api'
 import BooksCard from '../../components/BooksCard'
 
-function BooksList() {
-  const history = useHistory()
+function BooksList({ onDelete }) {
   const [data, setData] = useState([])
 
   const populateData = async () => {
@@ -24,12 +23,14 @@ function BooksList() {
     populateData()
   }, [])
 
-  const handleClickShow = (id) => {
-    history.push(`/books/${id}`)
-  }
-
-  const handleDelete = (id) => {
-
+  const handleDelete = async (id) => {
+    const response = await books.postDelete(id)
+    if (response.status === 200) {
+      // const filtered = await
+      const filtered = await data.filter((single) => id !== single.id)
+      setData(filtered)
+      // setData(filtered)
+    }
   }
 
   return (
@@ -43,7 +44,7 @@ function BooksList() {
             title={item.title}
             years={item.years}
             id={item.id}
-            onClickCard={handleDelete}
+            onDelete={handleDelete}
           />
         ))
       }

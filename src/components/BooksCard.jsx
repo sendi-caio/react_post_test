@@ -1,13 +1,14 @@
-import React from 'react';
+import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { books } from '../services/api'
 
-const BooksCard = ({ author, title, years, id, handleDelete: onclickDelete, hanldeShow }) => {
-
+const BooksCard = ({
+  author, title, years, id, onDelete,
+}) => {
   const history = useHistory()
-
-  const handleDelete = async (id) => {
-    const response = await books.postDelete(id)
+  const handleDelete = async (bookId) => {
+    // const response = await books.postDelete(id)
+    onDelete(bookId)
   }
 
   const onClickShow = (id) => {
@@ -17,20 +18,25 @@ const BooksCard = ({ author, title, years, id, handleDelete: onclickDelete, hanl
   return (
     <div className="card m-3">
       <div className="card-body">
-        <p className="card-text">Author: {author}</p>
-        <p className="card-text">Title: {title}</p>
-        <p className="card-text">Years: {years}</p>
-        {
-          (
-            <button
-              type="button"
-              className="btn btn-danger"
-              onClick={handleDelete}
-            >
-              Delete
-            </button>
-          )
-        }
+        <p className="card-text">
+          Author:
+          {author}
+        </p>
+        <p className="card-text">
+          Title:
+          {title}
+        </p>
+        <p className="card-text">
+          Years:
+          {years}
+        </p>
+        <button
+          type="button"
+          className="btn btn-danger"
+          onClick={() => handleDelete(id)}
+        >
+          Delete
+        </button>
 
         <button
           type="button"
@@ -38,7 +44,7 @@ const BooksCard = ({ author, title, years, id, handleDelete: onclickDelete, hanl
           onClick={() => onClickShow(id)}
         >
           Show
-          </button>
+        </button>
       </div>
     </div>
   )
