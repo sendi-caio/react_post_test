@@ -5,10 +5,12 @@ const axios = Axios.create({
 })
 
 const examples = {}
+const books = {}
 
 examples.get = () => axios.get('/examples')
 examples.getSingle = (id) => axios.get(`/examples/${id}`)
+books.get = () => axios.get('/books')
 
-export {
-  examples,
+exports = {
+  examples, books,
 }
