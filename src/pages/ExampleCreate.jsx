@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
+import { examples } from '../services/api'
 
 function ExampleCreate() {
   const [content, setContent] = useState('')
 
-  const saveButtonClick = () => {
-    // find your own way
+  const saveButtonClick = async () => {
+    const response = await examples.post({ content })
+    console.log(response)
     console.log(content)
   }
 

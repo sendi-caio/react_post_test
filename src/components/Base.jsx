@@ -7,6 +7,7 @@ import Home from '../pages/Home'
 import ExampleList from '../pages/ExampleList'
 import ExampleSingle from '../pages/ExampleSingle'
 import ExampleCreate from '../pages/ExampleCreate'
+import BookCreate from '../pages/BookCreate'
 
 function Base() {
   return (
@@ -23,7 +24,7 @@ function Base() {
           {/* EXAMPLE END */}
 
           {/* ROUTES START HERE */}
-
+          <Route path="/books/create" component={BookCreate} />
           {/* ROUTES END HERE */}
         </Switch>
         <Navigation />

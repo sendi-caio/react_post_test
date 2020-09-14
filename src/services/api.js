@@ -8,9 +8,10 @@ const examples = {}
 const books = {}
 
 examples.get = () => axios.get('/examples')
+examples.post = (data) => axios.post('/examples', data)
 examples.getSingle = (id) => axios.get(`/examples/${id}`)
 books.get = () => axios.get('/books')
 
-exports = {
+export {
   examples, books,
 }

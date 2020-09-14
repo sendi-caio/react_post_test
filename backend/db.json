@@ -12,11 +12,31 @@
     {
       "id": 3,
       "content": "Acer"
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "xiomay": "",
+      "id": 6
+    },
+    {
+      "sandi": "",
+      "id": 7
+    },
+    {
+      "content": "sandi",
+      "id": 8
     }
-  ],"books":[
+  ],
+  "books": [
     {
       "id": 1,
-      "title": "imam bonjol"
+      "title": "imam bonjol",
+      "author": "sandi"
     }
   ]
 }
