@@ -39,7 +39,9 @@ function ExampleList() {
             onClickCard={handleClickCard}
             contentId={item.id}
           />
+
         ))
+
       }
     </div>
   )

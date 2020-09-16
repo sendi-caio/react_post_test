@@ -1,6 +1,8 @@
 import React from 'react'
 
-function ExampleCard({ content, onClickCard: handleClick, contentId }) {
+function ExampleCard({
+  content, onClickCard: handleClick, contentId,
+}) {
   return (
     <div className="card m-3">
       <div className="card-body">
@@ -8,13 +10,15 @@ function ExampleCard({ content, onClickCard: handleClick, contentId }) {
         {
           handleClick
           && (
-            <button
-              type="button"
-              className="btn btn-primary"
-              onClick={() => handleClick(contentId)}
-            >
-              Show
-            </button>
+            <div>
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={() => handleClick(contentId)}
+              >
+                Show
+              </button>
+            </div>
           )
         }
       </div>

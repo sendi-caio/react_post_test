@@ -8,6 +8,8 @@ import ExampleList from '../pages/ExampleList'
 import ExampleSingle from '../pages/ExampleSingle'
 import ExampleCreate from '../pages/ExampleCreate'
 import BookCreate from '../pages/BookCreate'
+import BookList from '../pages/BookList'
+import BookSingle from '../pages/BookSingle'
 
 function Base() {
   return (
@@ -25,6 +27,9 @@ function Base() {
 
           {/* ROUTES START HERE */}
           <Route path="/books/create" component={BookCreate} />
+          <Route path="/books/:id" component={BookSingle} />
+          <Route path="/books" component={BookList} />
+
           {/* ROUTES END HERE */}
         </Switch>
         <Navigation />
